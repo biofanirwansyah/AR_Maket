@@ -24,6 +24,7 @@ public class objek : MonoBehaviour
         index = 1;
         name = this.gameObject.name;
     }
+    //dari sini
     private void OnMouseEnter()
     {
         name = this.gameObject.name;
@@ -35,6 +36,7 @@ public class objek : MonoBehaviour
         name = this.gameObject.name;
         GameObject.Find(name).GetComponent<Renderer>().material.color = Color.white;
     }
+    //sampai sini
     public void merah()
     {
         if (index == 1)
