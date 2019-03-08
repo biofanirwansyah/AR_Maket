@@ -24,6 +24,17 @@ public class objek : MonoBehaviour
         index = 1;
         name = this.gameObject.name;
     }
+    private void OnMouseEnter()
+    {
+        name = this.gameObject.name;
+        color = new Color(0f, 0f, 0f, 1f);
+        GameObject.Find(name).GetComponent<Renderer>().material.color = color;
+    }
+    private void OnMouseExit()
+    {
+        name = this.gameObject.name;
+        GameObject.Find(name).GetComponent<Renderer>().material.color = Color.white;
+    }
     public void merah()
     {
         if (index == 1)
