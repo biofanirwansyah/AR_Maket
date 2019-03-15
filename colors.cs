@@ -10,4 +10,6 @@ public class colors : MonoBehaviour
     {
         red = 1;
     }
+    
+    //tambahkan sendiri warnanya 
 }
