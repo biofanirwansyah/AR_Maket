@@ -13,12 +13,25 @@ public class objek : MonoBehaviour
     Renderer rend;
     public int index;
     public string name;
-
+    public colors clred; //tambahkansendiri warnanya
+    
     private void Start()
     {
-       
-        LoadObjek();
+       clred= GameObject.Find("red").GetComponent(typeof(colors)) as colors;//tambahkansendiri warnanya
+       LoadObjek();
     }
+    
+    //tambahkansendiri warnanya
+    private void Update()
+    {
+   
+        if (clr.red == 1)
+        {
+            merah();
+        }
+    }
+    
+    
     private void OnMouseDown()
     {
         index = 1;
