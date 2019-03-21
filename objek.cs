@@ -13,21 +13,49 @@ public class objek : MonoBehaviour
     Renderer rend;
     public int index;
     public string name;
-    public colors clred; //tambahkansendiri warnanya
+    public dataobjek names;
+    public buttonScript clrred;
+    public buttonScript clrsave;
+    public buttonScript clrload;//tambahkansendiri warnanya
     
     private void Start()
     {
-       clred= GameObject.Find("red").GetComponent(typeof(colors)) as colors;//tambahkansendiri warnanya
-       LoadObjek();
+       clrred= GameObject.Find("red").GetComponent(typeof(buttonScript)) as buttonScript;
+        clrsave = GameObject.Find("save").GetComponent(typeof(buttonScript)) as buttonScript;
+        clrload = GameObject.Find("load").GetComponent(typeof(buttonScript)) as buttonScript;
+        names = GameObject.Find("dataobjek").GetComponent(typeof(dataobjek)) as dataobjek;
     }
     
     //tambahkansendiri warnanya
     private void Update()
     {
    
-        if (clr.red == 1)
+         if (clrred.red == 1)
         {
             merah();
+            index = 0;
+        }
+        else
+        {
+
+        }
+        if (clrsave.save == 1)
+        {
+            SaveObjek();
+           
+        }
+        else
+        {
+
+        }
+        if (clrload.load == 1)
+        {
+            LoadObjek();
+           
+        }
+        else
+        {
+
         }
     }
     
