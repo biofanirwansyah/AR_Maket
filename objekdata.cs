@@ -11,8 +11,8 @@ public class objekdata
     public float x;
     public float y;
     public float z;
-    public string names;
-    public objekdata(objek obj,dataobjek dataobj)
+    public string names;//ditambahkan
+    public objekdata(objek obj,dataobjek dataobj)//[arameter ditambahkan
     {
         r = obj.r;
         g = obj.g;
@@ -20,7 +20,7 @@ public class objekdata
         x=obj.transform.localScale.x;
         y=obj.transform.localScale.z;
         z=obj.transform.localScale.z;
-        foreach (string str in dataobj.name)
+        foreach (string str in dataobj.name)//penyimpanan data dari array list dataobjek.cs
         {
             names += str; 
         }
