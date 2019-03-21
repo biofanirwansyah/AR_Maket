@@ -4,12 +4,12 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public static class saveandload
 {
-    public static void SaveObjek(objek obj)
+    public static void SaveObjek(objek obj, dataobjek dataobj)//parameter ditambahkan
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/player.fun";
         FileStream stream = new FileStream(path, FileMode.Create);
-        objekdata data = new objekdata(obj);
+        objekdata data = new objekdata(obj,dataobj); // dirubah
         formatter.Serialize(stream, data);
         stream.Close();
 
